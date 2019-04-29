@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>House4</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display|Lora:400,700');
+	body{
+		background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwCg3FpgNzDS1asaDL74DTstCBcXk7U1CMXt8epWcUfu8bUpl8dQ");
+		background-attachment: fixed;
+	}
+	img{
+		height: 400px;
+		width:500px;
+		max-width: auto;
+		max-height: auto;
+		border-radius: 15px;
+		opacity:1;
+		transition: 1s ease;
+		border-style: double;
+	}
+	.header{
+		width:100%;
+		height:15%;
+		position:fixed;
+		background-image: url("https://img.freepik.com/free-vector/abstract-dark-blue-polygonal-background_1035-9700.jpg?size=626&ext=jpg");
+		background-attachment: fixed;
+		top:0;
+		left:0;
+		border-bottom-style:double;
+		z-index: 1;
+	}
+	.footer{
+		width:7%;
+		position:fixed;
+		bottom: 0;
+		left:0;
+		font-weight: bolder;
+		border-style:double;
+	}
+	.footer:hover{
+		cursor: pointer;
+	}
+	.opaq{
+		background-color:#6a8fcc;
+		opacity: 0;
+		width:500px;
+		height:400px;
+		position: absolute;
+		transition: .5s ease;
+  		text-align: center;
+  		font-size:30px;
+  		border-radius: 15px;
+  		border-style: solid;
+	}
+	.blank1{
+		opacity:1;
+		width:500px;
+		height:400px;
+		position: absolute;
+		border-style:solid;
+		left:75px;
+		padding: 50px;
+		font-size:25px;
+		border-style:none;
+		text-align: justify;
+	}
+	.container{
+		right:8px;
+		font-family: 'Lora', serif;
+  		letter-spacing: 3px; 
+  		color:black;
+	}
+	th
+	{
+		color:brown;
+		font-size: larger;
+		text-align: center;
+		border-style:none;
+		border-bottom-style: solid;
+		width: 180px;
+		height:100px;
+		border-color: black;
+
+	}
+	td{
+		color:brown;
+		font-size: larger;
+		text-align: center;
+		border-style:none;
+		width: 180px;
+		height:100px;
+		border-color: black;
+	}
+	.tableborder1{
+		border-right-style: solid;
+	}
+	.tableborder2{
+		border-bottom-style: solid;
+		border-right-style: solid;
+		width:350px;
+		height:25px;
+	}
+	.tableborder3{
+		border-bottom-style: solid;
+		width:350px;
+		height:25px;
+	}
+	hr{
+		height:3px;
+	}
+	.booking{
+		width:15%%;
+		height:25%;
+		position:fixed;
+		border-style: solid;
+	}
+	.booking:hover{
+		cursor: pointer;
+	}
+	#modal{
+			display:none;
+			position:fixed;
+			z-index:1;
+			padding-top: 100px;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.4);
+		}
+		.modal-content{
+			background-color: #fefefe;
+			margin:auto;
+			padding: 20px;
+			border:1px solid #888;
+			width: 80%;
+			border-color: black;
+			border-width: 5px;
+		}
+		#close{
+			color: #aaaaaa;
+			float:right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		#modal1{
+			display:none;
+			position:fixed;
+			z-index:1;
+			padding-top: 100px;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.4);
+		}
+		.modal-content1{
+			background-color: #fefefe;
+			margin:auto;
+			padding: 20px;
+			border:1px solid #888;
+			width: 80%;
+			border-color: black;
+			border-width: 5px;
+		}
+		#close1{
+			color: #aaaaaa;
+			float:right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.btn:hover{
+			cursor: pointer;
+		}
+		.logo{
+			max-height: 90px;
+			max-width: 130px;
+			border-style: none;
+		}
+	</style>
+</head>
+<body onload="setTimeout(popup1,10000)">
+	<div class="container">
+		<div class="header" style="font-size:40px; text-align: right; color:white;"><a href="map.html"><img class="logo" src="logo1.png" align="left" height="10px" width="10px"></a>
+			<b>10697 Somma Way, Los Angeles, <br>CA 90077</b>&nbsp;
+		</div><br><br><br><br><br>
+		<div onclick="popup()" class="booking">B<br>O<br>O<br>K<br> <br>N<br>O<br>W</div>
+
+		<div id="modal">
+			<div class="modal-content">
+				<span id="close" onclick="cross()" onmouseover="hand()">&times;</span>
+				<h1 align="center">BOOK</h1>
+				<h3 align="center">Contact an Agent</h3>
+			<form>
+				<center>Name: <input type="text" value="Your Name"><br><br>
+				Contact: <input type="text" value="Phone"><br><br>
+				Email: <input type="text"><br><br>
+				<textarea rows="5" cols="40">I am interested in 10697 Somma Way, Los Angeles, CA 90077.</textarea><br><br>
+				<input type="checkbox">I want financing information<br><br>
+				<button><img src="http://www.myshortsalesagent.com/wp-content/uploads/2014/06/Contacy-Us-MyShortSalesAgent.png" style="height:50px;width: 200px; border-style: none;"></button>
+				</center>
+			</form>
+			</div>
+		</div>
+		<div style="border-style: solid;width:100%;height: 30%;text-align: center;">
+			<img id="i2" src="https://photos.zillowstatic.com/cc_ft_1344/IS2fof8fv3mffo1000000000.webp"><div class="btn" style="position: relative;" onclick="f2()">&laquo; Previous</div><div class="btn" style="position:relative;" onclick="f3()">Next &raquo;</div>
+		</div>
+		<pre><br><br><br><br><br><br><br><br><br></pre>
+		<div class="opaq" onmouseenter="f1('opaq',0.8,0)" onmouseleave="f1('opaq',0,0)" style="left:8px; text-align: justify;">For Sale: $100,000,000 (8 beds, 21 baths, 41,000 sqft)</div>
+		<img class="i" src="https://photos.zillowstatic.com/cc_ft_1344/IS2fof8fv3mffo1000000000.webp">
+		<table align="right">
+			<tr>
+				<th class="tableborder1">Price</th><th class="tableborder1">Bed</th><th class="tableborder1">Bath</th><th>Area</th>
+			</tr>
+			<tr>
+				<td class="tableborder1">$100,000,000</td><td class="tableborder1">8</td><td class="tableborder1">21</td><td>41,000 sqft</td>
+			</tr>
+		</table>
+		<br>
+		<div class="opaq" onmouseenter="f1('opaq',0.8,1)" onmouseleave="f1('opaq',0,1)" style="right:8px;">A beautiful entry hallway</div>
+		<img class="i" src="https://photos.zillowstatic.com/cc_ft_768/ISusprelkbobw40000000000.webp" align="right">
+		<div class="blank1">At just over 41,000 square-feet, this modern Spanish villa redefines the Bel Air landscape. The property's location is ideally situated mere blocks from the iconic Hotel Bel Air. The home features 8 bedrooms, 21 bathrooms and is one of the largest homes in the world with Circadian Rhythm Lighting in Color, 2 pools (including an indoor Olympic-length lap pool).</div>
+		<pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></pre>
+		<div class="opaq" onmouseenter="f1('opaq',0.8,2)" onmouseleave="f1('opaq',0,2)" style="left:8px;">An elegent parlour</div>
+		<img class="i" src="https://photos.zillowstatic.com/cc_ft_576/ISugg4hgmug8w10000000000.webp">	
+		<table align="right">
+			<tr>
+				<th class="tableborder2">Type</th><td class="tableborder3">Single Family</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Year Built</th><td class="tableborder3">2019</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">County</th><td class="tableborder3">Los Angeles</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Parking</th><td class="tableborder3">Attached Garage</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Cooling</th><td class="tableborder3">Central</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Heating</th><td class="tableborder3">Forced air</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Lot</th><td class="tableborder3">1.35 acres</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Price/sqft</th><td class="tableborder3">$2,439</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Fireplace</th><td class="tableborder3">Yes</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Private pool</th><td class="tableborder3">Yes</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Appliances included in sale</th><td class="tableborder3">Dishwasher, Dryer, Freezer, Garbage disposal, Refrigerator, Washer</td>
+			</tr>
+		</table>
+		<br>
+		<div class="opaq" onmouseenter="f1('opaq',0.8,3)" onmouseleave="f1('opaq',0,3)" style="right:8px;">An artistic living room with a fire-place</div>
+		<img class="i" src="https://photos.zillowstatic.com/cc_ft_576/ISmmnfweg3gew40000000000.webp" align="right">
+	
+		<div class="blank1">Indoor basketball court/grand ballroom, underground auto gallery, giant outdoor video screen, recording studio, entertainment room, 6 bars, service kitchen with walk-in refrigerator, wine tasting room that sits above a massive wine cellar with separate areas for red wine, white wine & champagne, movie theater with dedicated kitchen.</div>
+		<pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></pre>
+		<div class="opaq" onmouseenter="f1('opaq',0.8,4)" onmouseleave="f1('opaq',0,4)" style="left:8px;">A courtyard surrounded by 40 foot tall Canary Island palms and a setting worthy of the best Italian palazzo</div>
+		<img class="i" src="https://photos.zillowstatic.com/cc_ft_576/ISmaesy9im8bw10000000000.webp">
+		<table align="right">
+			<tr>
+				<th class="tableborder2">Equipment</th><td class="tableborder3">Alarm System</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Listing Status</th><td class="tableborder3">Active</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Parking Garage</th><td class="tableborder3">Covered Parking, Garage - 4+ Car</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Laundry</th><td class="tableborder3">Room</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">Listing Area</th><td class="tableborder3">Bel Air - Holmby Hills</td>
+			</tr>
+			<tr>
+				<th class="tableborder2">View Description</th><td class="tableborder3">Tree Top, Canyon</td>
+			</tr>
+		</table>
+
+		<br>
+		<div class="opaq" onmouseenter="f1('opaq',0.8,5)" onmouseleave="f1('opaq',0,5)" style="right:8px;">A four plus acre backyard offers views to a pool with pool house, two-story guesthouse, tennis court, two bedroom guest house and a walking/jogging trail that surrounds the estate</div>
+		<img class="i" src="https://photos.zillowstatic.com/cc_ft_576/ISegl3e8cv7hw40000000000.webp" align="right">
+		<div class="blank1">Full service salon with soaking tub, steam room, wellness center spa with both infrared and traditional saunas and a fitness center. The home is decorated with rich woods and the finest Italian stones. 10697 Somma Way is quite simply an elite estate in one of the preeminent locations in the world</div>
+		<pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></pre><hr noshade><hr noshade>
+		<div align="center" style="float: left;"><h2>CONTACT AGENT</h2>
+			<table style="width: 400px;">
+				<tr>
+					<td><img src="https://photos.zillowstatic.com/h_n/IS2r1q24akgxd90000000000.jpg" style="height: 100px;width: 100px;"></td>
+					<td><a href="https://www.zillow.com/profile/Angela-Power-Broker/">Angela Hyman</a><br>(844)497-5283</td>
+				</tr>
+				<tr>
+					<td><img src="https://photos.zillowstatic.com/h_n/ISmmbim7asjlc60000000000.jpg" style="height: 100px;width: 100px;"></td>
+					<td><a href="https://www.zillow.com/profile/Parnes-and-Harris/">David Parnes and James Harris</a><br>(818)239-7680</td>
+				</tr>
+				<tr>
+					<td><img src="https://photos.zillowstatic.com/h_n/ISy7w9q2lmnpxp1000000000.jpg" style="height: 100px;width: 100px;"></td>
+					<td><a href="https://www.zillow.com/profile/Halton-Pardee/">Tami Pardee and Partners</a><br>(310)692-7529</td>
+				</tr>
+			</table>
+		</div>
+		<div style="float: right;">
+			<h1 align="center">JOIN US</h1>
+			<h4 align="center">Sign Up</h4>
+			<form>
+				<center>Userame: <input type="text"><br><br>
+				Password: <input type="password"><br><br>
+				Email: <input type="text"><br><br>
+				<button>SIGN UP</button>
+				</center>
+			</form>
+			<hr>
+			<h4 align="center">Log In</h4>
+			<form>
+				<center>Userame/Email: <input type="text"><br><br>
+				Password: <input type="password"><br><br>
+				<button>LOG IN</button>
+				</center>
+			</form>
+		</div>
+		<div class="footer" onclick="popup1()">JOIN US</div>
+	</div>
+<div id="modal1">
+			<div class="modal-content1">
+				<span id="close1" onclick="cross1()" onmouseover="hand1()">&times;</span>
+				<h1 align="center">JOIN US</h1>
+			<h4 align="center">Sign Up</h4>
+			<form>
+				<center>Userame: <input type="text"><br><br>
+				Password: <input type="password"><br><br>
+				Email: <input type="text"><br><br>
+				<button>SIGN UP</button>
+				</center>
+			</form>
+			<hr>
+			<h4 align="center">Log In</h4>
+			<form>
+				<center>Userame/Email: <input type="text"><br><br>
+				Password: <input type="password"><br><br>
+				<button>LOG IN</button>
+				</center>
+			</form>
+			</div>
+		</div>
+<script>
+	var modal=document.getElementById("modal");
+	var close=document.getElementById("close");
+	var modal1=document.getElementById("modal1");
+	var close1=document.getElementById("close1");
+	var i=0;
+	function f1()
+	{
+		
+		var x=document.getElementsByClassName(arguments[0]);
+		x[arguments[2]].style.opacity=arguments[1];
+	}
+	function popup()
+	{
+		modal.style.display="block";
+	}
+	function cross()
+	{
+		modal.style.display="none";
+	}
+	function hand()
+	{
+		close.style.cursor="pointer";
+	}
+	function popup1()
+	{
+		modal1.style.display="block";
+	}
+	function cross1()
+	{
+		modal1.style.display="none";
+	}
+	function hand1()
+	{
+		close1.style.cursor="pointer";
+	}
+	function f2()
+	{
+		var sources=["https://photos.zillowstatic.com/cc_ft_768/ISqdbzxee17ptk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISa17bx16lqutk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISecyyvbpot5uk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISuo2nwox4a0uk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/IS66wmd5lgl8uk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISqtrycsc05euk1000000000.webp"];
+		if(i==0)
+			i=sources.length-1;
+		else
+			i--;
+		document.getElementById("i2").src=sources[i];
+	}
+	function f3()
+	{
+		var sources=["https://photos.zillowstatic.com/cc_ft_768/ISqdbzxee17ptk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISa17bx16lqutk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISecyyvbpot5uk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISuo2nwox4a0uk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/IS66wmd5lgl8uk1000000000.webp","https://photos.zillowstatic.com/cc_ft_1344/ISqtrycsc05euk1000000000.webp"];
+		if(i==sources.length-1)
+			i=0;
+		else
+			i++;
+		document.getElementById("i2").src=sources[i];
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#modal{
+			display:none;
+			position:fixed;
+			z-index:1;
+			padding-top: 100px;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.4);
+		}
+		.modal-content{
+			background-color: #fefefe;
+			margin:auto;
+			padding: 20px;
+			border:1px solid #888;
+			width: 80%;
+		}
+		#close{
+			color: #aaaaaa;
+			float:right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="popup()">BOOK NOW!</button>
+	<div id="modal">
+		<div class="modal-content">
+			<span id="close" onclick="cross()" onmouseover="hand()">&times;
+			</span>
+			<h1 align="center">BOOK</h1>
+			<h3 align="center">Contact an Agent</h3>
+	<form>
+		<center>Name: <input type="text" value="Your Name"><br><br>
+		Contact: <input type="text" value="Phone"><br><br>
+		Email: <input type="text"><br><br>
+		<textarea rows="5" cols="40">I am interested in 67 Beverly Park Ct, Beverly Hills, CA 90210.</textarea><br><br>
+		<input type="checkbox">I want financing information<br><br>
+		<button><img src="http://www.myshortsalesagent.com/wp-content/uploads/2014/06/Contacy-Us-MyShortSalesAgent.png" style="height:50px;width: 200px;"></button>
+	</center>
+	</form>
+		</div>
+	</div>
+	<script>
+		var modal=document.getElementById("modal");
+		var close=document.getElementById("close");
+		function popup()
+		{			
+			modal.style.display="block";
+		}
+		function cross()
+		{
+			modal.style.display="none";
+		}
+		function hand()
+		{
+			close.style.cursor="pointer";
+		}
+	</script>
+</body>
+</html>

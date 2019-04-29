@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+	body{
+		background-color: #fcc;
+	}
+	img{
+		height: 250px;
+		max-width: auto;
+		max-height: auto;
+	}
+	.opaq{
+		background-color: #fff;
+		opacity: 0;
+		width:210px;
+		height:250px;
+		position: absolute;
+  		top: 8px;
+  		
+	}
+	.container{
+		right:8px;
+		font-family: 'Abril Fatface', cursive;
+  		letter-spacing: 3px; 
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img  src="https://s1.r29static.com//bin/entry/aba/720x864,85/2107162/image.webp">	
+		<div class="opaq" onmouseenter="f1('opaq',0.8,0)" onmouseleave="f1('opaq',0,0)">HARRY STYLES</div>
+		
+		<div class="opaq" onmouseenter="f1('opaq',0.8,1)" onmouseleave="f1('opaq',0,1)"style="left:221px">HARRY STYLES</div>
+		<img  src="https://s1.r29static.com//bin/entry/aba/720x864,85/2107162/image.webp">	
+	</div>
+
+<script>
+	function f1()
+	{
+		
+		var x=document.getElementsByClassName(arguments[0]);
+		x[arguments[2]].style.opacity=arguments[1];
+		x[arguments[2]].style.width="300px";
+	}
+	
+</script>
+</body>
+</html>
